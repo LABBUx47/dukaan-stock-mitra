@@ -1,0 +1,32 @@
+name: feel_tunes
+description: "FeelTunes - An intuitive, feeling-responsive music player that detects emotion and plays matching tunes."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  just_audio: ^0.9.40
+  permission_handler: ^11.3.1
+  audio_session: ^0.1.21
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/audio/
+    - assets/audio/happy_song.mp3
+    - assets/audio/sad_song.mp3
+    - assets/audio/calm_song.mp3
+    - assets/audio/energetic_song.mp3
+    - assets/audio/romantic_song.mp3
+    - assets/audio/nostalgic_song.mp3

@@ -1,0 +1,6 @@
+{
+  "name": "दुकान स्टॉक मित्र - AI Stock & Rack Locator",
+  "description": "Smart retail inventory with AI photo scanning, peti/carton inward tracking, category organization, and shop rack location mapping.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>दुकान स्टॉक मित्र — AI Stock & Rack Locator</title>
+    <meta name="description" content="दुकान का सारा सामान, पेटी हिसाब, AI फोटो स्कैन और रैक लोकेशन अपने मोबाइल में चलाएं।" />
+    <meta property="og:title" content="दुकान स्टॉक मित्र — AI Stock & Rack Locator" />
+    <meta property="og:description" content="दुकान का सारा सामान, पेटी हिसाब, AI फोटो स्कैन और रैक लोकेशन अपने मोबाइल में चलाएं।" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Mobile & PWA Meta Tags -->
+    <meta name="theme-color" content="#020617" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="दुकान स्टॉक" />
+    <meta name="application-name" content="दुकान स्टॉक मित्र" />
+    <meta name="msapplication-TileColor" content="#020617" />
+
+    <!-- Icons & Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Suppress benign Vite HMR WebSocket closing warning in cloud iframe -->
+    <script>
+      window.addEventListener('error', function(event) {
+        if (event && event.message && (event.message.indexOf('WebSocket') !== -1 || event.message.indexOf('@vite/client') !== -1)) {
+          event.stopImmediatePropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event && event.reason && typeof event.reason.message === 'string' && event.reason.message.indexOf('WebSocket') !== -1) {
+          event.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 select-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
